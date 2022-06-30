@@ -7,6 +7,4 @@ export function game(data: any, color?: Color, embed?: boolean): string {
   return (embed ? '/embed/' : '/') + id + (color ? '/' + color : '');
 }
 
-export function cont(data: GameData, mode: ContinueMode): string {
-  return game(data) + '/continue/' + mode;
-}
+export const cont = (data: GameData, mode: ContinueMode): string => game(data) + '/continue/' + mode;
